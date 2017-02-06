@@ -3,6 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        "use strict";
+        /*let [a, b, c] = [1, 2, 3];
+        console.log(a,b,c);*/
+        //1,2,3 上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值。本质上，这种写法属于“模式匹配”，
+        // 只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。
+        console.log("------------1----------------");
+        let [foo, [[bar], baz]] = [1, [[2], 3]];
+        console.log(foo); // 1
+        console.log(bar); // 2
+        console.log(baz); // 3
+
+        let [ , , third] = ["foo", "bar", "baz"];
+        console.log(third) // "baz"
+
+        /*let [x, , y] = [1, 2, 3];
+        console.log(x) // 1
+        console.log(y) // 3*/
+
+        let [head, ...tail] = [1, 2, 3, 4];
+        console.log(head) // 1
+        console.log(tail) // [2, 3, 4]
+
+       /* let [x, y, ...z] = ['a'];
+        console.log(x) // "a"
+        console.log(y) // undefined
+        console.log(z) // []*/
+        console.log("------------2----------------");
+        let [x, y] = [1, 2, 3];
+        console.log( x )// 1
+        console.log(y) // 2
+
+        let [a, [b], d] = [1, [2, 3], 4];
+        console.log(a) // 1
+        console.log(b) // 2
+        console.log(d) // 4
+        //上面两个例子，都属于不完全解构，但是可以成功。
+
+
+    </script>
 </head>
 <body>
 
