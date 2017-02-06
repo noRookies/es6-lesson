@@ -193,6 +193,21 @@
     };//除了将对象本身冻结，对象的属性也应该冻结。下面是一个将对象彻底冻结的函数。
     //ES5只有两种声明变量的方法：var命令和function命令。
     // ES6除了添加let和const命令，后面章节还会提到，另外两种声明变量的方法：import命令和class命令。所以，ES6一共有6种声明变量的方法。
+    console.log("============14");
+    window.g = 1;
+    console.log(g); // 1
+
+    g = 2;
+    console.log(window.g) // 2
+   //上面代码中，顶层对象的属性赋值与全局变量的赋值，是同一件事。
+    console.log("============15");
+    var h = 1;
+    // 如果在Node的REPL环境，可以写成global.a
+    // 或者采用通用方法，写成this.a
+   console.log(window.h)  // 1
+
+    let ba = 1;
+    console.log(window.ba) // undefined
 
 
     </script>
