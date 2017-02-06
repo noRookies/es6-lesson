@@ -133,12 +133,12 @@
     const foo = 2.14;
 
     console.log("============6");
-    if (true) {
+  /*  if (true) {
         const MAX = 5;
     }
 
     MAX // Uncaught ReferenceError: MAX is not defined
-    console.log(MAX)
+    console.log(MAX)*/
 
     console.log("============7");
     if (true) {
@@ -146,6 +146,11 @@
         const MAX = 5;
     }
     console.log("============8");
+    if (true) {
+        const MAX = 5;
+        console.log(MAX); // ReferenceError
+
+    }
 
     </script>
 </head>
